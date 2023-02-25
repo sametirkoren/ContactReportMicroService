@@ -1,14 +1,19 @@
+using Contact.Core.Entities;
+
 namespace Contact.Domain.Entities;
 
-public class User
+[Dapper.Contrib.Extensions.Table("users")]
+public class User : IEntity
 {
-    public Guid Id { get; set; }
+    [Dapper.Contrib.Extensions.Key]
     
-    public string Name { get; set; }
+    public Guid user_id { get; set; }
     
-    public string Surname { get; set; }
+    public string first_name { get; set; }
     
-    public string Company { get; set; }
+    public string surname { get; set; }
+    
+    public string company { get; set; }
     
     
 }
