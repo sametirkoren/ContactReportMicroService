@@ -7,7 +7,7 @@ public class M_0003_CreateTable_ContactType : Migration
     public override void Up()
     {
         Create.Table("contactTypes")
-            .WithColumn("contact_type_id").AsGuid().PrimaryKey().Identity()
+            .WithColumn("contact_type_id").AsGuid().PrimaryKey()
             .WithColumn("name").AsString().NotNullable()
             .WithColumn("description").AsString().Nullable();
         

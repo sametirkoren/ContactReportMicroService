@@ -5,7 +5,7 @@ namespace Contact.Domain.Entities;
 [Dapper.Contrib.Extensions.Table("users")]
 public class User : IEntity
 {
-    [Dapper.Contrib.Extensions.Key]
+    [Dapper.Contrib.Extensions.ExplicitKey]
     
     public Guid user_id { get; set; }
     

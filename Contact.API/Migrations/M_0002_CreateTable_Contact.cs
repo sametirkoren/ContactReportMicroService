@@ -7,10 +7,10 @@ public class M_0002_CreateTable_Contact : Migration
     public override void Up()
     {
         Create.Table("contacts")
-            .WithColumn("contact_id").AsGuid().PrimaryKey().Identity()
+            .WithColumn("contact_id").AsGuid().PrimaryKey()
             .WithColumn("user_id").AsGuid().NotNullable()
             .WithColumn("contact_type_id").AsGuid().NotNullable()
-            .WithColumn("value").AsGuid().NotNullable();
+            .WithColumn("value").AsString().NotNullable();
     }
 
     public override void Down()

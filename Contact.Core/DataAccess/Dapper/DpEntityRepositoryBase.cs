@@ -31,7 +31,7 @@ public class DpEntityRepositoryBase<T> : IEntityRepository<T> where T : class, I
             return _dbConnection.Get<T>(filter);
         }
 
-        public T GetById(int id)
+        public T GetById(Guid id)
         {
             return _dbConnection.Get<T>(id);
         }

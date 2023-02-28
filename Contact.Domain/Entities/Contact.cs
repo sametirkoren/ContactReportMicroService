@@ -6,7 +6,7 @@ namespace Contact.Domain.Entities;
 
 public class Contact : IEntity
 {
-    [Dapper.Contrib.Extensions.Key]
+    [Dapper.Contrib.Extensions.ExplicitKey]
     
     public Guid contact_id { get; set; }
     
